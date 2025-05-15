@@ -7,6 +7,7 @@
     <style>
         *{
             margin: 0; padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         .container{
             width: 1200px;
@@ -14,72 +15,325 @@
             margin-right: auto;
         }
         .logo{
+            position: relative;
             width: 1200px;
             height: 80px;
-            background-color: black;
+            background: linear-gradient(green,lightgreen);
+          
+            background-repeat: no-repeat;
             border: 2px solid white;
             font-size: 40px; color: white; text-align: center;
+            font-family: cursive;
+            border-radius: 40px;
+            
+        }
+        .logo img{
+            position: absolute;
+            top: 0; left: 20px;
+            height: 80px; width: 80px;
             
         }
         .banner{
              width: 1200px;
             height: 200px;
-            background-color: black;
+            display: flex;
+            border-radius: 40px;
+            margin-top: 40px;
+            background:linear-gradient(green,lightgreen);
+            background-repeat: no-repeat;
             border: 2px solid white;
             font-size: 40px; color: white; text-align: center;
+            position: relative;
+        }
+        .banner p{
+            position: absolute;
+            font-size: 50px;
+            color: white;
+            top: 30px;
+            left: 300px;
+            font-family: cursive;
+            z-index: 1;
+        }
+         .banner h6{
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            bottom: 10px;
+            left: 300px;
+            font-family: cursive;
+        
+        }
+        .banner img{
+            position: absolute;
+            background-size: cover;
+         bottom: 10px;left: 10px;
+            height: 100px;
+            border-radius: 30px;
+
+
         }
         .intro{
-            width: 1200px; height: 100px;
-            background-color: black;
-            border: 2px solid white;
+            position: relative;
+            margin-top: 50px;
+            width: 1200px; height: 500px;
+            background: linear-gradient(white, lightgreen);
+            border-radius: 40px;
             font-size: 40px; color: white; text-align: center;
+            border-radius: 40px;
+            margin-bottom: 40px;
         }
+        .intro img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%; width: 100%;
+            object-fit: cover;
+            border-radius: 40px;
+
+        }
+       
+        
+    
         .box1{
+            margin-bottom: 40px;
             float:left;
-            background-color: black;
+            background: linear-gradient(green, lightgreen);
             height: 400px; width: 300px;
             border: 2px solid white;
-            font-size: 40px; color: white; text-align: center;
+            position: relative;
+            border-radius: 30px;
+        }
+        .box1 img{
+            position: absolute;
+            top: 0;
+            left: 45px;
+            height: 200px;
+            transition: 1s;
+            border-radius: 20px;
+        }
+        .box1:hover img{
+        height: 220px;
+        }
+        .box1 h4{
+            position: absolute;
+            bottom: 120px;
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+            left: 50px;
+            font-size: 25px;
+            border-radius: 20px;
+            height: 50px;
+            width: 200px;
+            text-align: center;
+        }
+        .box1 h5{
+            position: absolute;
+            bottom: 80px;
+            border: 2px solid black;
+            color: rgb(248, 251, 248);
+            background-color: rgb(30, 189, 22);
+            left: 50px;
+            border-radius: 20px;
+            font-size: 25px;
+            height: 35px;
+            width: 200px;
+            text-align: center;
+
+        }
+        .box1 h6{
+            position: absolute;
+            bottom: 30px;
+            width: 200px;
+            text-align: center;
+            border: 2px solid black;
+            color: rgb(249, 251, 249);
+            background-color: rgb(30, 189, 22);
+            left: 50px;
+            border-radius: 20px;
+            font-size: 25px;
+            transition: 0.6s;
+            height: 40px;
+        }
+        .box1 h6:hover{
+            border: 3px solid black;
         }
         .box2{
-            float: left;
-            background-color: black;
-            height: 400px; width: 300px;
-            border: 2px solid white;
+            margin-bottom: 40px;
+            float:left;
             margin-left: 150px;
-            font-size: 40px; color: white; text-align: center;
-        }
-        .box3{
-            float: right;
-            background-color: black;
+            background: linear-gradient(green, lightgreen);
             height: 400px; width: 300px;
-            
             border: 2px solid white;
-            font-size: 40px; color: white; text-align: center;
+            position: relative;
+            border-radius: 30px;
+        }
+        .box2 img{
+            position: absolute;
+            top: 0;
+            left: 45px;
+            height: 200px;
+            transition: 1s;
+            border-radius: 20px;
+        }
+        .box2:hover img{
+        height: 220px;
+        }
+        .box2 h4{
+            position: absolute;
+            bottom: 120px;
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+            left: 50px;
+            font-size: 25px;
+            border-radius: 20px;
+            height: 50px;
+            width: 200px;
+            text-align: center;
+        }
+        .box2 h5{
+            position: absolute;
+            bottom: 80px;
+            border: 2px solid black;
+            color: rgb(248, 251, 248);
+            background-color: rgb(30, 189, 22);
+            left: 50px;
+            border-radius: 20px;
+            font-size: 25px;
+            height: 35px;
+            width: 200px;
+            text-align: center;
+
+        }
+        .box2 h6{
+            position: absolute;
+            bottom: 30px;
+            width: 200px;
+            text-align: center;
+            border: 2px solid black;
+            color: rgb(249, 251, 249);
+            background-color: rgb(30, 189, 22);
+            left: 50px;
+            border-radius: 20px;
+            font-size: 25px;
+            transition: 0.6s;
+            height: 40px;
+        }
+        
+        .box3{
+            margin-bottom: 40px;
+            float:right;
+            background: linear-gradient(green, lightgreen);
+            height: 400px; width: 300px;
+            border: 2px solid white;
+            position: relative;
+            border-radius: 30px;
+        }
+        .box3 img{
+            position: absolute;
+            top: 0;
+            left: 45px;
+            height: 200px;
+            transition: 1s;
+            border-radius: 20px;
+        }
+        .box3:hover img{
+        height: 220px;
+        }
+        .box3 h4{
+            position: absolute;
+            bottom: 120px;
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+            left: 50px;
+            font-size: 25px;
+            border-radius: 20px;
+            height: 50px;
+            width: 200px;
+            text-align: center;
+        }
+        .box3 h5{
+            position: absolute;
+            bottom: 80px;
+            border: 2px solid black;
+            color: rgb(248, 251, 248);
+            background-color: rgb(30, 189, 22);
+            left: 50px;
+            border-radius: 20px;
+            font-size: 25px;
+            height: 35px;
+            width: 200px;
+            text-align: center;
+
+        }
+        .box3 h6{
+            position: absolute;
+            bottom: 30px;
+            width: 200px;
+            text-align: center;
+            border: 2px solid black;
+            color: rgb(249, 251, 249);
+            background-color: rgb(30, 189, 22);
+            left: 50px;
+            border-radius: 20px;
+            font-size: 25px;
+            transition: 0.6s;
+            height: 40px;
         }
         .clear-fix{
             clear: both;
         }
         .footer{
-            background-color: black;
+            background: linear-gradient(green , lightgreen);
             height: 80px; width: 1200px;
-            border: 2px solid white;
-            font-size: 40px; color: white; text-align: center;
+            border-radius: 40px;
+            font-size: 40px; color: white; 
+            text-align: center;
+            margin-top: 30px;
         }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">Logo</div>
-        <div class="banner">Header</div>
-        <div class="intro">Intro</div>
-       <div class="box">
-        <div class="box1">Box1</div>
-        <div class="box2">Box2</div>
-        <div class="box3">Box3</div>
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <h2>Starbucks</h2>
+        </div>
+        <div class="banner">
+            <p>cold brew week</p>
+            <h6>Experience 48 hour of craft in every cold brew</h6>\
+            <img src="Bestseller.jpg" alt="">
+        </div>
+        <div class="intro">
+            <img src="ICW_Live_Event_Day5_41f11ca3d2.jpg" alt="">
+               
+        </div>
+       
+        <div class="box1">
+            <img src="CoffeeAtHome.jpg" alt="">
+            <h4>Coffee Powder </h4>
+            <h5>Price:Rs.250</h5>
+            <h6>Order now</h6>
+        </div>
+        <div class="box2">
+            <img src="Frappe.jpg" alt="">
+            <h4>Moocha Frappe </h4>
+            <h5>Price:Rs.700</h5>
+            <h6>Order now</h6>
+        </div>
+        <div class="box3">
+            <img src="images.jpg" alt="">
+            <h4>Cappuccino</h4>
+            <h5>Price:Rs.1250</h5>
+            <h6>Order now</h6>
+        </div>
+       
+       <div class=" clear-fix footer">
+        Address:- Model Town , near sec-18 , Delhi
        </div>
-       <div class=" clear-fix footer">Footer</div>
     </div>
 </body>
 </html>
