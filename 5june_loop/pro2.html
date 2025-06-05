@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let first=parseInt(prompt("enter first number : "));
+        let second=parseInt(prompt("enter second number : "));
+
+        if(first>second){
+            let box=first
+            first=second
+            second=box
+        }
+
+        for(let i=first;i<=second;i++){
+            document.writeln(i);
+        }
+    </script>
+</body>
+</html>
