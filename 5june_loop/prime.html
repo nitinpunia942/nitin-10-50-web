@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function isPrime(N) {
+    for (let i = 2; i < N; i++) {
+        if (N % i === 0)
+            return false;
+    }
+    return true;
+}
+let cnt = 0;
+let num = 2;
+while (cnt < 10) {
+    if (isPrime(num)) {
+        document.writeln(num);
+        cnt++;
+    }
+    num++;
+}
+    </script>
+</body>
+</html>
