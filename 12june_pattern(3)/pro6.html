@@ -8,13 +8,13 @@
 <body>
     <script>
         count=6;
-        for(let i=1;i<=9;i++){
-            if(i<=5){
-                count--;
-            } else{
+        for(i=9;i>=1;i--){
+            if(i<5){
                 count++;
+            } else{
+                count--;
             } for(let j=count;j>=1;j--){
-                document.writeln(j)
+                document.writeln("*")
             }
             document.writeln("<br>")
         }

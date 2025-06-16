@@ -8,31 +8,16 @@
 <body>
     <script>
         count=0;
-         num=6;
         for(let i=1;i<=9;i++){
-           if(i>5){
-                    num++;
-                }else{
-                    num--;
-                } for(let k=1;k<=num;k++){
-                    document.writeln("&")
-                }
-
-
-
             if(i<=5){
                 count++;
-            }else{
-                count--;
+            } else{
+                count--; 
             } for(j=1;j<=count;j++){
-                document.writeln("*");
+                document.writeln("&nbsp;&nbsp;");
+            }  for(k=5;k>=count;k--){
+                document.writeln("*")
             }
-           
-        
-               
-            
-            
-            
             
             document.writeln("<br>")
         }
