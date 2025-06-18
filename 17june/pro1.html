@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1=parseInt(prompt("enter first number :"));
+        let num2=parseInt(prompt("enter second number :"));
+        let symbol=prompt("enter symbol :");
+        let result;
+
+        if(symbol=="+"){
+            result=num1+num2;
+            document.writeln("result : "+result);
+        }else if(symbol=="-" && num1>num2){
+            result=num1-num2;
+            document.writeln("result : "+result);
+        }else if(symbol=="-" && num2>num1){
+            result=num2-num1;
+            document.writeln("result : "+result);
+        }
+        else if(symbol=="*"){
+            result=num1*num2;
+            document.writeln("result : "+result);
+            
+        }else if(symbol=="/" && num1>num2){
+            result=num1/num2;
+            document.writeln("result : "+result);
+        }else if(symbol=="/" && num2>num1){
+            result=num2/num1;
+            document.writeln("result : "+result);
+        }
+    </script>
+</body>
+</html>
