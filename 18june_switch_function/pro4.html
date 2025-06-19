@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(){
+            let num1=parseInt(prompt("Enter first number : "))
+            let num2=parseInt(prompt("Enter Second number : "))
+            document.writeln(num1+num2);
+        }
+        function sub(){
+            let num1=parseInt(prompt("Enter first number : "));
+            let num2=parseInt(prompt("Enter Second number : "));
+            document.writeln(num1-num2);
+        }
+         let symbol=prompt("enter symbol");
+        switch(symbol){
+            
+            case "+":sum();
+            break;
+
+            case "-":sub();
+            break;
+
+            default: document.writeln("Error:")
+        }
+    </script>
+</body>
+</html>

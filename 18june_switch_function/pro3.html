@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum() {
+            let num1 = parseInt(prompt("Enter first number : "));
+            let num2 = parseInt(prompt("Enter second number : "));
+            document.writeln(num1 + num2);
+
+        }
+
+        function sub() {
+            let num1 = parseInt(prompt("Enter first number : "));
+            let num2 = parseInt(prompt("Enter second number : "));
+            document.writeln(num1 - num2);
+        }
+
+        function multi() {
+            let num1 = parseInt(prompt("Enter first number : "));
+            let num2 = parseInt(prompt("Enter second number : "));
+            document.writeln(num1 * num2);
+
+        }
+
+        function divi() {
+            let num1 = parseInt(prompt("Enter first number : "));
+            let num2 = parseInt(prompt("Enter second number : "));
+            document.writeln(num1 / num2);
+        }
+
+
+        let symbol = prompt("Enter the symbol : ");
+        switch (symbol) {
+            case "+": sum();
+                break;
+
+            case "-": sub();
+                break;
+
+            case "*": multi();
+                break;
+
+            case "/": divi();
+                break;
+
+            default: document.writeln("Error:");
+        }
+    </script>
+</body>
+
+</html>
