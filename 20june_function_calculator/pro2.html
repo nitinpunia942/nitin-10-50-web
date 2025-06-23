@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="first">: First<br>
+    <input type="text" name="" id="second">: Second <br>
+    <button onclick="add()">+</button> 
+    <button onclick="sub()">-</button> 
+    <button onclick="multi()">*</button> 
+    <button onclick="div()">/</button> <br>
+    <input type="text" name="" id="result">:Result
+
+
+    <script>
+        function add(){
+            let first=parseInt(document.getElementById('first').value);
+            let second=parseInt(document.getElementById('second').value);
+            let result=first+second;
+            document.getElementById('result').value=result;
+        }
+        function sub(){
+            let first=parseInt(document.getElementById('first').value);
+            let second=parseInt(document.getElementById('second').value);
+            let result=first-second;
+            document.getElementById('result').value=result;
+        }
+                function multi(){
+            let first=parseInt(document.getElementById('first').value);
+            let second=parseInt(document.getElementById('second').value);
+            let result=first*second;
+            document.getElementById('result').value=result;
+        }        function div(){
+            let first=parseInt(document.getElementById('first').value);
+            let second=parseInt(document.getElementById('second').value);
+            let result=first/second;
+            document.getElementById('result').value=result;
+        }        
+    </script>
+</body>
+</html>

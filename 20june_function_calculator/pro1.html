@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="first">
+    <button onclick="zero()">0</button>
+    <button onclick="one()">1</button>
+    <button onclick="two()">2</button>
+    <button onclick="three()">3</button>
+    <button onclick="four()">4</button>
+    <button onclick="five() ">5</button>
+    <button onclick="six()">6</button>
+    <button onclick="seven()">7</button>
+    <button onclick="eight()">8</button>
+    <button onclick="nine()">9</button> <br>
+    
+    
+
+
+
+    <input type="text" name="" id="second">
+    <button onclick="szero()">0</button>
+    <button onclick="sone()">1</button>
+    <button onclick="stwo()">2</button>
+    <button onclick="sthree()">3</button>
+    <button onclick="sfour()">4</button>
+    <button onclick="sfive() ">5</button>
+    <button onclick="ssix() ">6</button>
+    <button onclick="sseven() ">7</button>
+    <button onclick="seight() ">8</button>
+    <button onclick="snine() ">9</button> <br>
+
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="multi()">*</button>
+    <button onclick="div()">/</button> <br>
+
+
+    Result:<input type="text" name="" id="result">
+    
+
+
+    <script>
+        function zero(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"0";
+            document.getElementById('first').value=newvalue;
+        }
+        function one(){
+            let oldvalue=document.getElementById('first').value;       
+            let newvalue=oldvalue+"1";
+            document.getElementById('first').value=newvalue;
+
+        }
+
+        function two(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"2";
+            document.getElementById('first').value=newvalue;
+        }
+
+        function three(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"3";
+            document.getElementById('first').value=newvalue;
+        }
+
+        function four(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"4";
+            document.getElementById('first').value=newvalue;
+        }
+
+        function five(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"5";
+            document.getElementById('first').value=newvalue;
+        }
+        function six(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"6";
+            document.getElementById('first').value=newvalue;
+        }
+        function seven(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"7";
+            document.getElementById('first').value=newvalue;
+        }
+        function eight(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"8";
+            document.getElementById('first').value=newvalue;
+        }
+        function nine(){
+            let oldvalue=document.getElementById('first').value;
+            let newvalue=oldvalue+"9";
+            document.getElementById('first').value=newvalue;
+        }
+
+
+
+
+        function szero(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+"0";
+            document.getElementById('second').value=newvalue;
+        }
+
+         function sone(){
+            let oldvalue=document.getElementById('second').value;       
+            let newvalue=oldvalue+"1";
+            document.getElementById('second').value=newvalue;
+
+        }
+
+        function stwo(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'2';
+            document.getElementById('second').value=newvalue;
+        }
+        function sthree(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'3';
+            document.getElementById('second').value=newvalue
+        }
+        function sfour(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'4';
+            document.getElementById('second').value=newvalue;
+        }
+
+        function sfive(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'5';
+            document.getElementById('second').value=newvalue;
+        }
+         
+         function ssix(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'6';
+            document.getElementById('second').value=newvalue;
+        }
+         function sseven(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'7';
+            document.getElementById('second').value=newvalue;
+        }
+         function seight(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'8';
+            document.getElementById('second').value=newvalue;
+        }
+         function snine(){
+            let oldvalue=document.getElementById('second').value;
+            let newvalue=oldvalue+'9';
+            document.getElementById('second').value=newvalue;
+        }
+
+        function add(){
+           let first=parseInt(document.getElementById('first').value);
+           let second=parseInt(document.getElementById('second').value);
+           let result=first+second;
+           document.getElementById('result').value=result;
+
+        }
+        function sub(){
+            let first=parseInt(document.getElementById('first').value);
+            let second=parseInt(document.getElementById('second').value);
+            let result=first-second;
+            document.getElementById('result').value=result;
+        }
+        function multi(){
+            let first=parseInt(document.getElementById('first').value);
+            let second=parseInt(document.getElementById('second').value);
+            let result=first*second;
+            document.getElementById('result').value=result;
+        }
+        function div(){
+            let first=parseInt(document.getElementById('first').value);
+            let second=parseInt(document.getElementById('second').value);
+            let result=first/second;
+            document.getElementById('result').value=result;
+        }
+        
+    </script>
+</body>
+</html>
