@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 50px;
+        }
+        p{
+            height: 200px;
+        }
+        button{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p id="field"></p>
+
+    <button onclick="button(this)">1</button>
+    <button onclick="button(this)">2</button>
+    <button onclick="button(this)">3</button>
+    <button onclick="button(this)">4</button>
+    <button onclick="button(this)">5</button>
+    <button onclick="button(this)">6</button>
+    <button onclick="button(this)">.</button>
+    <button onclick="button(this)">+</button>
+    <button onclick="button(this)">-</button>
+    <button onclick="button(this)">*</button>
+    <button onclick="button(this)">/</button>
+    <button onclick="equal()">=</button>
+    <button onclick="clear1()">C</button>
+
+    <script>
+        function clear1(){
+            document.getElementById('field').innerText="";
+
+        }
+
+        function equal(){
+            let expression=document.getElementById('field').innerText
+            let answer=eval(expression);
+            document.getElementById('field').innerText=answer;
+        }
+
+
+        function button(data){
+            let btnText=data.innerText;
+
+            let oldText=document.getElementById('field').innerText;
+            let newText=oldText+""+btnText;
+            document.getElementById('field').innerText=newText;
+        }
+    </script>
+</body>
+</html>
