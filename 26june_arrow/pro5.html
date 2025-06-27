@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: yellow;
+            height: 200px; width: 200px;
+        }
+        .content{
+            background-color: aqua;
+            height: 200px; width: 200px;
+        }
+        .box2{
+            background-color: purple;
+            height: 200px; width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box2" id="content"></div>
+    <button id="btn">yellow</button>
+    <button id="nobtn">blue</button>
+
+    <script>
+        
+
+        document.getElementById('nobtn').addEventListener('click',()=>{
+            const divclass=document.getElementById('content');
+            divclass.setAttribute('class','content');
+        })
+
+
+        document.getElementById('btn').addEventListener('click',()=>{
+            const divElement=document.getElementById('content');
+            divElement.setAttribute('class','box');
+        });
+
+    </script>
+</body>
+</html>

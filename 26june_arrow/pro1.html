@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 50px; width: 100px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .class{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border: 2px solid black;
+            height: 520px; width: 520px;
+        }
+        .image{
+            background-image: url(img/goku-beast-mode-amoled-black-background-minimal-5120x2880-4946.png);
+            height: 520px; width: 520px;
+            background-position: center;
+            background-size: cover;
+        }
+        .image2{
+            background-image: url(img/iron-man-marvel-superheroes-amoled-pitch-black-minimal-art-7680x6200-6293.png);
+            height: 520px; width: 520px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="id" class="class">Add image</div>
+
+    <button id="btn">Goku</button>
+    <button id="btnagn">Iron man</button>
+    <script>
+        document.getElementById('btn').addEventListener('click',()=>{
+            let first=document.getElementById('id');
+            first.setAttribute('class','image')
+        });
+        document.getElementById('btnagn').addEventListener('click',()=>{
+            let second=document.getElementById('id');
+            second.setAttribute('class','image2');
+        })
+    </script>
+</body>
+</html>

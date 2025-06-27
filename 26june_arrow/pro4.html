@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .id{
+            height: 200px; width: 100px;
+            border: 2px solid black;
+        }
+        .box{
+            height: 200px; width: 200px;
+            border: 2px solid black;
+        }
+        .box2{
+            height: 200px; width: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="id" class="id"></div>
+    <button id="btn">click to add 100px width</button>
+    <button id="btn2">click to add 200px width</button>
+    <script>
+        document.getElementById('btn').addEventListener('click',()=>{
+            let num=document.getElementById('id');
+            num.setAttribute('class','box')
+        });
+        document.getElementById('btn2').addEventListener('click',()=>{
+            let num=document.getElementById('id');
+            num.setAttribute('class','box2')
+        })
+    </script>
+</body>
+</html>

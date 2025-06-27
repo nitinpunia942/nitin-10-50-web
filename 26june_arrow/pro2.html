@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px; width: 200px;
+            border: 2px solid black;
+            background-color: aquamarine;
+        }
+        .id{
+            height: 200px; width: 200px;
+            border: 2px solid black;
+            background-color: aquamarine;
+        }
+        .animation{
+            animation: style 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite;
+        }
+        @keyframes style {
+           0% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="id" class="box"></div>
+    <button id="btn">start</button>
+    <button id="btn2">stop</button>
+    <script>
+        document.getElementById('btn').addEventListener('click',()=>{
+            let num=document.getElementById('id');
+            num.setAttribute('class','id animation');
+        });
+        document.getElementById('btn2').addEventListener('click',()=>{
+            let num=document.getElementById('id');
+            num.setAttribute('class','box')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            height: 400px; width: 200px;
+            background-color: black;
+        }
+        .square{
+            height: 300px;width: 300px;
+            background-color: black;
+        }
+        .circle{
+            height: 300px;width: 300px;
+            background-color: black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content" id="content"></div>
+    <button id="crcl">circle</button>
+    <button id="sqr">Square</button>
+
+    <script>
+        document.getElementById('crcl').addEventListener('click',()=>{
+            let shape=document.getElementById('content');
+            shape.setAttribute('class','circle');
+        });
+        document.getElementById('sqr').addEventListener('click',()=>{
+            let shape=document.getElementById('content');
+            shape.setAttribute('class','square')
+        })
+    </script>
+</body>
+</html>
