@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        img{
+             width: 300px;
+             background-position: center;
+        }
+        button{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/img1.jpg" alt="" id="box">
+    <button id="btn">next</button>
+    <button id="bck">back</button>
+    <script>
+        document.getElementById('btn').addEventListener('click',()=>{
+            document.getElementById('box').setAttribute('src','img/img6.jpg');
+        });
+        document.getElementById('bck').addEventListener('click',()=>{
+            document.getElementById('box').setAttribute('src','img/img1.jpg')
+        })
+    </script>
+</body>
+</html>

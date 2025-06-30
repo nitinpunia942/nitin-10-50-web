@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0;padding: 0;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        .box{
-            height: 100vh; width: 100%;
+
+        .box {
+            height: 100vh;
+            width: 100%;
             background-color: purple;
         }
-        .box2{
-            height: 100vh; width: 100%;
+
+        .box2 {
+            height: 100vh;
+            width: 100%;
             background-color: rgb(173, 35, 127);
         }
-        .box3{
-            height: 100vh; width: 100%;
+
+        .box3 {
+            height: 100vh;
+            width: 100%;
             background-color: rgb(69, 198, 201);
         }
-        .box4{
-            height: 100vh; width: 100%;
+
+        .box4 {
+            height: 100vh;
+            width: 100%;
             background-color: rgb(206, 220, 52);
         }
     </style>
 </head>
+
 <body>
     <div id="num">
         <button id="btn">Click Here</button>
@@ -33,24 +44,25 @@
         <button id="btn3">Click Here</button>
         <button id="btn4">Click Here</button>
     </div>
-    
+
     <script>
-        document.getElementById('btn').addEventListener('click',()=>{
-            let numm=document.getElementById('num');
-            numm.setAttribute('class','box')
+        document.getElementById('btn').addEventListener('click', () => {
+            let numm = document.getElementById('num');
+            numm.setAttribute('class', 'box')
         });
-        document.getElementById('btn2').addEventListener('click',()=>{
-            let numm=document.getElementById('num');
-            numm.setAttribute('class','box2')
+        document.getElementById('btn2').addEventListener('click', () => {
+            let numm = document.getElementById('num');
+            numm.setAttribute('class', 'box2')
         });
-        document.getElementById('btn3').addEventListener('click',()=>{
-            let numm=document.getElementById('num');
-            numm.setAttribute('class','box3')
+        document.getElementById('btn3').addEventListener('click', () => {
+            let numm = document.getElementById('num');
+            numm.setAttribute('class', 'box3')
         });
-        document.getElementById('btn4').addEventListener('click',()=>{
-            let numm=document.getElementById('num');
-            numm.setAttribute('class','box4')
+        document.getElementById('btn4').addEventListener('click', () => {
+            let numm = document.getElementById('num');
+            numm.setAttribute('class', 'box4')
         });
     </script>
 </body>
+
 </html>
