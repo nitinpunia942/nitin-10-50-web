@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body>
+  <div id="box"></div>
+  <div id="box2"></div>
+
+  <script>
+    let countriesList = ["Afghanistan", "Albania", "Algeria", "India", "Indonesia", "Iran"];
+    let stateList = ["Haryana", "Rajasthan", "UP", "Tamil Nadu", "Goa"];
+
+     str = '<select name="" id="select">';
+    for (var i = 0; i < countriesList.length; i++) {
+      if (countriesList[i] == "India") {
+        str = str + '<option selected>' + countriesList[i] + '</option>';
+      } else {
+        str = str + '<option>' + countriesList[i] + '</option>';
+      }
+    }
+    str = str + '</select>';
+    document.getElementById('box').innerHTML = str;
+
+    let selectElement = document.getElementById('select');
+    selectElement.addEventListener('change', ()=>{
+      let selectedText = selectElement.options[selectElement.selectedIndex].text;
+      let state;
+
+      if (selectedText == "India") {
+        state = '<select name="" id="">';
+        for (j = 0; j < stateList.length; j++) {
+          state = state + '<option>' + stateList[j] + '</option>';
+        }
+        state = state + '</select>';
+      }
+
+      document.getElementById('box2').innerHTML = state;
+    });
+  </script>
+</body>
+</html>

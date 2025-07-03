@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+        
+            height: 10vh;
+            background-color: rgb(176, 53, 82);
+        }
+        .box{
+            margin-left: 500px;
+            margin-top: 180px;
+            border: 2px solid white;
+            border: 2px solid black;
+            width: 300px;
+            padding: 20px;
+            padding-left: 35px;
+            background-color: white;
+            border-radius: 30px;
+             
+        }
+        button{
+            padding: 8px;
+            margin: 5px;
+            height: 60px; width: 60px;
+            background-color: black; color: white;
+            font-family: cursive; border: 2px solid black;
+            border-radius: 10px;
+            font-size: 25px;
+        }
+        button:hover{
+            background-color: rgb(100, 99, 99);
+        }
+        p{
+            height: 80px; width: 280px;
+            border: 2px solid black;
+            font-family: cursive;
+            font-size: 50px;
+            background-color: gray;
+            overflow: hidden;
+        
+            
+        }
+        .clear{
+            background-color: red; width: 135px;
+        }
+        .clear:hover {
+            background-color: rgb(189, 18, 75);
+        }
+        .ans{
+            width: 210px;
+        }
+        .operator{
+            background-color: green;
+        }
+        .operator:hover{
+            background-color: rgb(128, 193, 128);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+    <p id="calculator">mijdf</p>
+
+    <button class="clear" onclick="clear1()">C</button>
+
+    <button onclick="setValue(this)">0</button> 
+    <button class="operator" onclick="setValue(this)">+</button> <br> 
+    <button onclick="setValue(this)">1</button>
+    <button onclick="setValue(this)">2</button>
+    <button onclick="setValue(this)">3</button> 
+    <button class="operator" onclick="setValue(this)">-</button> <br>
+    <button onclick="setValue(this)">4</button>
+    <button onclick="setValue(this)">5</button>
+    <button onclick="setValue(this)">6</button> 
+    <button class="operator" onclick="setValue(this)">*</button> <br>
+    <button onclick="setValue(this)">7</button>
+    <button onclick="setValue(this)">8</button>
+    <button onclick="setValue(this)">9</button> 
+    
+    <button class="operator" onclick="setValue(this)">/</button> 
+    <button class="ans" onclick="equal()">=</button> 
+    <button onclick="setValue(this)">.</button> 
+
+
+    </div>
+    
+
+    <script>
+      function  clear1(){
+             document.getElementById('calculator').innerText='';
+        }
+
+         function setValue(data){
+            let BtnData=data.innerText;
+
+            let oldText=document.getElementById('calculator').innerText;
+            let newText=oldText+""+BtnData;
+            document.getElementById('calculator').innerText=newText;
+        }
+        function equal(){
+            let equals=document.getElementById('calculator').innerText;
+            let result=eval(equals);
+            document.getElementById('calculator').innerText=result;
+        }
+    </script>
+</body>
+</html>

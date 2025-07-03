@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px; ;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="goku-beast-mode-amoled-black-background-minimal-5120x2880-4946.png" alt="" id="img">
+    <button id="btn">Click</button>
+
+    <script>
+         let imgList=[
+            'goku-beast-mode-amoled-black-background-minimal-5120x2880-4946.png',
+            'goku-black-super-5120x2880-13399.jpg', 
+            'son-goku-amoled-7680x4320-18688.jpg',
+            'super-saiyan-blue-5120x2880-17603.jpg',
+         ];
+         document.getElementById('btn').addEventListener('click',()=>{
+            let imgElement=document.getElementById('img');
+            let imgName=imgElement.getAttribute('src');
+            let curindex=imgList.indexOf(imgName);
+            let newindex;
+            if(curindex==imgList.length-1){
+                newindex=0;
+            } else{
+                newindex=curindex+1;
+            } imgElement.setAttribute('src',imgList[newindex]);
+         })
+            
+         
+    </script>
+</body>
+</html>
