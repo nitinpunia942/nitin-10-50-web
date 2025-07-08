@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(166, 43, 105);
+        }
+        ul{
+            width: 600px;
+            margin: 100px auto;
+        }
+        li{
+            list-style: none;
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 100%;
+        }
+        label{
+            display: flex;
+            font-size: 25px;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        span{
+            rotate: 90deg;
+            font-weight: 790px;
+            transition: 0.8s;
+        }
+        input[type="radio"]{
+            display: none;
+        }
+        .box{
+            height: 0;
+            overflow: hidden;
+            background-color: rgb(166, 43, 105);
+            transition: 0.8s;
+            padding: 0 10px;
+            font-size: 25px;
+            color: white;
+        }
+        input[type="radio"]:checked+.box{
+            height: 200px;
+        }
+        input[type="radio"]:checked+span{
+            rotate: 0deg;
+        }
+    </style>
+</head>
+<body>
+    <ul id="acc">
+        <li>
+            <label for="first">
+                <p>1</p>What is HTML? <span>&#x3e;</span>
+            </label>
+            <input type="radio" name="acc" id="first">
+            <div class="box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto maxime totam, quam sunt delectus, rerum iste assumenda tempore aliquid velit iure id! Quia dicta nobis ad illo architecto ullam dolorum?
+            </div>
+        </li>
+        <li>
+            <label for="second">
+                <p>2</p>What is CSS? <span>&#x3e;</span>
+            </label>
+            <input type="radio" name="acc" id="second">
+            <div class="box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto maxime totam, quam sunt delectus, rerum iste assumenda tempore aliquid velit iure id! Quia dicta nobis ad illo architecto ullam dolorum?
+            </div>
+        </li>
+        <li>
+            <label for="third">
+                <p>3</p>What is Javascript? <span>&#x3e;</span>
+            </label>
+            <input type="radio" name="acc" id="third">
+            <div class="box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto maxime totam, quam sunt delectus, rerum iste assumenda tempore aliquid velit iure id! Quia dicta nobis ad illo architecto ullam dolorum?
+            </div>
+        </li>
+        <li>
+            <label for="fourth">
+                <p>4</p>What is react? <span>&#x3e;</span>
+            </label>
+            <input type="radio" name="acc" id="fourth">
+            <div class="box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto maxime totam, quam sunt delectus, rerum iste assumenda tempore aliquid velit iure id! Quia dicta nobis ad illo architecto ullam dolorum?
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

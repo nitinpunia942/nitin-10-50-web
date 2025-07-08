@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh; justify-content: center;
+            align-items: center;
+            background: linear-gradient(blueviolet,purple);
+        }
+        .box{
+            position: relative;
+            font-size: 50px;
+            color: white; font-weight: bold;
+            font-family: cursive;
+            padding: 50px;
+            cursor: pointer;
+        }
+        .tool{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 100px;
+            border: 3px solid white;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            width: 250px; height: 80px;
+            text-align: center;
+            transform: translateX(-50%);
+            transition: 0.5s;
+            opacity: 0;
+
+             }
+             .tool:before{
+                position: absolute;
+                content: "";
+                top: 100%;
+                left: 50%;
+                border: 25px solid;
+                border-color: #000 #0000 #0000 #0000;
+
+             }
+             .click{
+                position: absolute;
+                content: "";
+                top:80px ; left: 0;
+                width: 500px;
+                font-size: 50px;
+             }
+             .box:hover .tool{
+                top: -50%;
+                opacity: 1;
+             }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="tool">Hello</div>
+        <div class="click">Click here</div>
+    </div>
+</body>
+</html>

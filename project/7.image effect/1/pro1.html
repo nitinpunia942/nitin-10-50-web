@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+        .box{
+            height: 600px; width: 500px;
+            border: 3px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            height: 100%; width: 100%;
+            object-fit: cover;
+        }
+        .text{
+            position: absolute;
+            content: "";
+            left: 0; top: 0;
+            height: 100%; width: 100%;
+            background: linear-gradient(black,rgb(80, 209, 231));
+            transform: translateX(-100%);
+            transition: 1s;
+            color: black;
+            font-size: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box:hover .text{
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="goku-beast-mode-amoled-black-background-minimal-5120x2880-4946.png" alt="">
+        <div class="text">Welcome</div>
+    </div>
+</body>
+</html>

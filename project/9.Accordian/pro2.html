@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        ul{
+            margin-left: 800px;
+            margin: 100px;
+            width: 500px;
+        }
+        li{
+            padding: 20px;
+            list-style: none;
+        }
+        label{
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            background-color: white;
+            color: black;
+            height: 80px;
+        }
+        input[type="radio"]{
+            display: none;
+        }
+        span{
+            rotate: 90deg;
+        }
+        .box{
+            padding:0 10px;
+            height: 0;
+            overflow: hidden;
+            transition: 0.8s;
+            background-color: white;
+        }
+        input[type="radio"]:checked+ .box{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ac">
+        <li>
+            <label for="first">
+                <p>1</p>What is cricket?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="first">
+            <div class="box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint expedita eveniet numquam quaerat tenetur aliquam animi, nostrum, illum obcaecati facere iure, laudantium veniam. Molestias vel soluta officiis aliquid. Autem, dignissimos?
+            </div>
+        </li>
+        <li>
+            <label for="second">
+                <p>2</p>What is Football?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="second">
+            <div class="box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint expedita eveniet numquam quaerat tenetur aliquam animi, nostrum, illum obcaecati facere iure, laudantium veniam. Molestias vel soluta officiis aliquid. Autem, dignissimos?
+            </div>
+        </li>
+        <li>
+            <label for="third">
+                <p>3</p>What is cricket?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="third">
+            <div class="box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint expedita eveniet numquam quaerat tenetur aliquam animi, nostrum, illum obcaecati facere iure, laudantium veniam. Molestias vel soluta officiis aliquid. Autem, dignissimos?
+            </div>
+        </li>
+        <li>
+            <label for="fourth">
+                <p>4</p>What is cricket?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="fourth">
+            <div class="box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint expedita eveniet numquam quaerat tenetur aliquam animi, nostrum, illum obcaecati facere iure, laudantium veniam. Molestias vel soluta officiis aliquid. Autem, dignissimos?
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

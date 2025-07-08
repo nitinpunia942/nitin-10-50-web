@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{
+            margin: 0; padding: 0;
+          }
+          body{
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(#0093e9, #80d0c7);
+          }
+          .box{
+            position: relative;
+            height: 30rem; width: 30rem;
+            background-color: white;
+          }
+          .box::before, .box::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background: white;
+            height: 100%; width: 100%;
+            z-index: -1;
+            transition: 1s;
+          }
+          .box:hover::after{
+            rotate: 20deg;
+          }
+          .box:hover::before{
+            rotate: 30deg;
+          }
+          .image{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1;
+            background-color: black;
+            transition: 1s;
+
+          }
+          img{
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%; width: 100%;
+            object-fit: cover;
+            z-index: 2;
+          }
+          .text{
+            position: absolute;
+            left: 10px; right: 10px; bottom: 10px;
+            height: 50px;
+            text-align: center;
+
+          }
+          .box:hover .image{
+            bottom: 80px;
+          }
+           
+          
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="image">
+            <img src="marian-oleksyn-Edv_EEWiB3E-unsplash.jpg" alt="" >
+            </div>
+            <div class="text">
+                <h3>Olivia</h3>
+        </div>
+    </div>
+</body>
+</html>

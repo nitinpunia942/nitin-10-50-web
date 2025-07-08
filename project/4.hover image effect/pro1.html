@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background:linear-gradient(red,yellow);
+        }
+        .box{
+            position: relative;
+            height: 500px; width: 900px;
+            border: 3px solid black;
+        }
+        .image{
+            position: absolute;
+            height: 100%; width: 100%;
+            top: 0; left: 0;
+            transition: 1s;
+            
+        }
+        .image1{
+            position: absolute;
+            background: url(HD-wallpaper-wolverine-8k-wolverine-superheroes.jpg);
+            background-position: center;
+            background-size: cover;
+            
+            
+        }
+        .image2{
+            position: absolute;
+            background: url(deadpool-wolverine-1920x1200-15857.jpg);
+            background-position: center;
+            background-size: cover;
+            clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+        }
+        .image3{
+            position: absolute;
+            background: url(51723-1920x1080-desktop-1080p-deadpool-wallpaper.jpg);
+            background-position: center;
+            background-size: cover;
+            clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
+        }
+        .box:hover .image {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.box .image:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="image image1"></div>
+        <div class="image image2"></div>
+        <div class="image image3"></div>
+    </div>
+</body>
+</html>

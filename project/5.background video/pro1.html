@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .box{
+            width: 100%; height: 100vh;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        .box1{
+            text-align: center; 
+            padding: 40px;
+            margin: 20px;
+            
+        }
+        h1{
+            padding: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 150px;
+            font-family: cursive;
+            transition: 0.5s;
+            
+        }
+        h1:hover{
+            -webkit-text-stroke: 2px greenyellow;
+            color: rgba(255, 255, 255, 0.065);
+            color: transparent;
+        }
+        a:hover{
+            border: 4px solid white;
+            background-color: rgb(2, 64, 2);
+        }
+        a{
+        color: white;
+        text-decoration: none;
+        font-size: 40px;
+        border: 2px solid white;
+        height: 30px; width: 100px;
+        padding: 10px;
+        transition: 0.5s;
+        font-family: cursive;
+        border-radius: 20px;
+        }
+        .back-video {
+                     position: absolute;
+                     right: 0;
+                    bottom: 0;
+                     z-index: -1;
+                    
+}
+
+
+
+    </style>
+    
+</head>
+<body>
+   <div class="box">
+    <video autoplay loop muted plays-inline class="back-video" >
+        <source src="3130284-uhd_3840_2160_30fps.mp4">
+    </video>
+    <div class="box1">
+      <div><h1>Coming soon</h1></div>  
+       <div><a href="tel:7015947174">Call Us</a></div> 
+    </div>
+   </div>
+</body>
+</html>

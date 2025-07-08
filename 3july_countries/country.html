@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             background-color: rgb(90, 88, 88);
         }
-        select{
+
+        select {
             font-size: 30px;
             font-family: cursive;
         }
@@ -38,21 +39,21 @@
             let indiaStateList = ["Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Delhi", "Jammu and Kashmir", "Ladakh"];
             let japanList = ["Hokkaido", "Aomori", "Iwate", "Miyagi", "Akita", "Yamagata", "Fukushima", "Ibaraki", "Tochigi", "Gunma", "Saitama", "Chiba", "Tokyo", "Kanagawa", "Niigata", "Toyama", "Ishikawa", "Fukui", "Yamanashi", "Nagano", "Gifu", "Shizuoka", "Aichi", "Mie", "Shiga", "Kyoto", "Osaka", "Hyogo", "Nara", "Wakayama", "Tottori", "Shimane", "Okayama", "Hiroshima", "Yamaguchi", "Tokushima", "Kagawa", "Ehime", "Kochi", "Fukuoka", "Saga", "Nagasaki", "Kumamoto", "Oita", "Miyazaki", "Kagoshima", "Okinawa"];
             let italyList = ["Abruzzo", "Aosta Valley", "Apulia", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", "Friuli Venezia Giulia", "Lazio", "Liguria", "Lombardy", "Marche", "Molise", "Piedmont", "Sardinia", "Sicily", "Trentino-Alto Adige", "Tuscany", "Umbria", "Veneto"];
-             let australiaList=["New South Wales", "Victoria", "Queensland", "Western Australia", "South Australia", "Tasmania", "Australian Capital Territory", "Northern Territory"];
-              let brazilList=["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"];
-            let canadaList=["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Nova Scotia", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Northwest Territories", "Nunavut", "Yukon"];
-              let russiaList=["Amur", "Arkhangelsk", "Astrakhan", "Belgorod", "Bryansk", "Chelyabinsk", "Irkutsk", "Ivanovo", "Kaliningrad", "Kaluga", "Kamchatka", "Kemerovo", "Kirov", "Kostroma", "Kurgan", "Kursk", "Leningrad", "Lipetsk", "Magadan", "Moscow", "Murmansk", "Nizhny Novgorod", "Novgorod", "Novosibirsk", "Omsk", "Orenburg", "Oryol", "Penza", "Pskov", "Rostov", "Ryazan", "Sakhalin", "Samara", "Saratov", "Smolensk", "Sverdlovsk", "Tambov", "Tomsk", "Tula", "Tver", "Tyumen", "Ulyanovsk", "Vladimir", "Volgograd", "Vologda", "Voronezh"];
-              let peruList=["Amazonas", "Áncash", "Apurímac", "Arequipa", "Ayacucho", "Cajamarca", "Callao", "Cusco", "Huancavelica", "Huánuco", "Ica", "Junín", "La Libertad", "Lambayeque", "Lima", "Loreto", "Madre de Dios", "Moquegua", "Pasco", "Piura", "Puno", "San Martín", "Tacna", "Tumbes", "Ucayali"];
-              let portugalList=["Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", "Coimbra", "Évora", "Faro", "Guarda", "Leiria", "Lisbon", "Portalegre", "Porto", "Santarém", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu", "Azores", "Madeira"];
-              let chinaList=[
-                           "Anhui", "Fujian", "Gansu", "Guangdong", "Guizhou", "Hainan",
-                           "Hebei", "Heilongjiang", "Henan", "Hubei", "Hunan", "Jiangsu",
-                           "Jiangxi", "Jilin", "Liaoning", "Qinghai", "Shaanxi", "Shandong",
-                           "Shanxi", "Sichuan", "Yunnan", "Zhejiang", "Taiwan",
-                           "Guangxi Zhuang", "Inner Mongolia", "Ningxia Hui",
-                           "Tibet", "Xinjiang Uyghur",
-                           "Beijing", "Shanghai", "Tianjin", "Chongqing",
-                           "Hong Kong", "Macau"]
+            let australiaList = ["New South Wales", "Victoria", "Queensland", "Western Australia", "South Australia", "Tasmania", "Australian Capital Territory", "Northern Territory"];
+            let brazilList = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"];
+            let canadaList = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Nova Scotia", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Northwest Territories", "Nunavut", "Yukon"];
+            let russiaList = ["Amur", "Arkhangelsk", "Astrakhan", "Belgorod", "Bryansk", "Chelyabinsk", "Irkutsk", "Ivanovo", "Kaliningrad", "Kaluga", "Kamchatka", "Kemerovo", "Kirov", "Kostroma", "Kurgan", "Kursk", "Leningrad", "Lipetsk", "Magadan", "Moscow", "Murmansk", "Nizhny Novgorod", "Novgorod", "Novosibirsk", "Omsk", "Orenburg", "Oryol", "Penza", "Pskov", "Rostov", "Ryazan", "Sakhalin", "Samara", "Saratov", "Smolensk", "Sverdlovsk", "Tambov", "Tomsk", "Tula", "Tver", "Tyumen", "Ulyanovsk", "Vladimir", "Volgograd", "Vologda", "Voronezh"];
+            let peruList = ["Amazonas", "Áncash", "Apurímac", "Arequipa", "Ayacucho", "Cajamarca", "Callao", "Cusco", "Huancavelica", "Huánuco", "Ica", "Junín", "La Libertad", "Lambayeque", "Lima", "Loreto", "Madre de Dios", "Moquegua", "Pasco", "Piura", "Puno", "San Martín", "Tacna", "Tumbes", "Ucayali"];
+            let portugalList = ["Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", "Coimbra", "Évora", "Faro", "Guarda", "Leiria", "Lisbon", "Portalegre", "Porto", "Santarém", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu", "Azores", "Madeira"];
+            let chinaList = [
+                "Anhui", "Fujian", "Gansu", "Guangdong", "Guizhou", "Hainan",
+                "Hebei", "Heilongjiang", "Henan", "Hubei", "Hunan", "Jiangsu",
+                "Jiangxi", "Jilin", "Liaoning", "Qinghai", "Shaanxi", "Shandong",
+                "Shanxi", "Sichuan", "Yunnan", "Zhejiang", "Taiwan",
+                "Guangxi Zhuang", "Inner Mongolia", "Ningxia Hui",
+                "Tibet", "Xinjiang Uyghur",
+                "Beijing", "Shanghai", "Tianjin", "Chongqing",
+                "Hong Kong", "Macau"]
 
             if (text == "Japan") {
                 str2 = '<select name="" id="">'
@@ -79,7 +80,7 @@
                 str2 = str2 + '</select>'
                 document.getElementById('box2').innerHTML = str2;
 
-            }else if (text == "Australia") {
+            } else if (text == "Australia") {
                 str2 = '<select name="" id="">'
                 for (let l = 0; l < australiaList.length; l++) {
                     str2 = str2 + '<option value="">' + australiaList[l] + '</option>'
@@ -88,7 +89,7 @@
                 str2 = str2 + '</select>'
                 document.getElementById('box2').innerHTML = str2;
 
-            }else if (text == "Brazil") {
+            } else if (text == "Brazil") {
                 str2 = '<select name="" id="">'
                 for (let l = 0; l < brazilList.length; l++) {
                     str2 = str2 + '<option value="">' + brazilList[l] + '</option>'
@@ -97,7 +98,7 @@
                 str2 = str2 + '</select>'
                 document.getElementById('box2').innerHTML = str2;
 
-            }else if (text == "Canada") {
+            } else if (text == "Canada") {
                 str2 = '<select name="" id="">'
                 for (let l = 0; l < canadaList.length; l++) {
                     str2 = str2 + '<option value="">' + canadaList[l] + '</option>'
@@ -106,7 +107,7 @@
                 str2 = str2 + '</select>'
                 document.getElementById('box2').innerHTML = str2;
 
-            }else if (text ==  "Russian Federation") {
+            } else if (text == "Russian Federation") {
                 str2 = '<select name="" id="">'
                 for (let l = 0; l < russiaList.length; l++) {
                     str2 = str2 + '<option value="">' + russiaList[l] + '</option>'
@@ -115,7 +116,7 @@
                 str2 = str2 + '</select>'
                 document.getElementById('box2').innerHTML = str2;
 
-            }else if (text ==  "Portugal") {
+            } else if (text == "Portugal") {
                 str2 = '<select name="" id="">'
                 for (let l = 0; l < portugalList.length; l++) {
                     str2 = str2 + '<option value="">' + portugalList[l] + '</option>'
@@ -124,7 +125,7 @@
                 str2 = str2 + '</select>'
                 document.getElementById('box2').innerHTML = str2;
 
-            }else if (text ==  "China") {
+            } else if (text == "China") {
                 str2 = '<select name="" id="">'
                 for (let l = 0; l < chinaList.length; l++) {
                     str2 = str2 + '<option value="">' + chinaList[l] + '</option>'
@@ -133,7 +134,7 @@
                 str2 = str2 + '</select>'
                 document.getElementById('box2').innerHTML = str2;
 
-            }else if (text ==  "Peru") {
+            } else if (text == "Peru") {
                 str2 = '<select name="" id="">'
                 for (let l = 0; l < peruList.length; l++) {
                     str2 = str2 + '<option value="">' + peruList[l] + '</option>'

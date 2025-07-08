@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(11, 11, 11);
+            font-family: cursive;
+        }
+
+        ul {
+            margin: 100px auto;
+            width: 600px;
+        }
+
+        li {
+            list-style: none;
+            width: 100%;
+            padding: 20px;
+            background: white;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            font-size: 20px;
+            justify-content: space-between;
+        }
+
+        span {
+            rotate: 90deg;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(8, 7, 7);
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .content {
+            background-color: rgb(15, 15, 15);
+            color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.8s;
+            line-height: 25px;
+            padding: 0 10px;
+
+        }
+
+        input[type="radio"]:checked+.content {
+            max-height: 100px;
+        }
+
+        input[type="radio"]:checked+span {
+            rotate: 0deg;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="ac">
+        <li>
+            <label for="first">
+                <p>1.</p> What is HTML ?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="first" />
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis reiciendis tenetur eius rerum. Nisi
+                    nemo officiis exercitationem dignissimos, provident, obcaecat</p>
+            </div>
+        </li>
+        <li>
+            <label for="second">
+                <p>2.</p> What is CSS ?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="second" />
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis reiciendis tenetur eius rerum. Nisi
+                    nemo officiis exercitationem dignissimos, provident, obcaecat</p>
+            </div>
+        </li>
+        <li>
+            <label for="third">
+                <p>3.</p> What is Javascript ?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="third" />
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis reiciendis tenetur eius rerum. Nisi
+                    nemo officiis exercitationem dignissimos, provident, obcaecat</p>
+            </div>
+        </li>
+        <li>
+            <label for="fourth">
+                <p>4.</p> What is node js ?<span>&#x3e;</span>
+            </label>
+            <input type="radio" name="ac" id="fourth" />
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis reiciendis tenetur eius rerum. Nisi
+                    nemo officiis exercitationem dignissimos, provident, obcaecat</p>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .box{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .box2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        
+
+        }
+        .circle1, .circle2, .circle3, .circle4{
+            height: 50px; width:50px;
+            border-radius: 50%;
+            border: 2px solid black;
+            background-color: black;
+            margin: 5px;
+            animation: circle 1s linear infinite ;
+
+            
+        }
+        .circle1{
+            animation-delay: 0.4s;
+        }
+        .circle2{
+            animation-delay: 0.6s;
+        }
+        .circle3{
+            animation-delay: 0.8s;
+        }
+
+        @keyframes circle {
+            50%{
+                height: 30px;
+                width: 30px;
+            }
+        
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+</body>
+</html>

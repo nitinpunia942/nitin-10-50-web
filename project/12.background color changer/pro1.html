@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh; justify-content: center;
+            align-items: center;
+            transition: 0.9s;
+            flex-direction:  column;
+        }
+        #btn{
+            font-size: 40px;
+            border: 3px solid black;
+            cursor: pointer;
+            transition: 0.8s;
+            padding: 20px;
+        }
+        #code{
+
+            font-size: 30px;
+            transition: 0.8s;
+        }
+      </style>
+</head>
+<body>
+    <div id="btn">click</div>
+    <div id="code"></div>
+    <script>
+       let btn=document.getElementById('btn');
+       let code=document.getElementById('code');
+
+       function color(){
+        let letter="0123456789ABCDEF"
+        let color="#"
+        for(let i=0;i<6;i++){
+            color +=letter[Math.floor(Math.random()*16)];
+        }
+        return(color);
+       }
+       btn.addEventListener('click',()=>{
+        document.body.style.backgroundColor= color();
+        code.innerHTML=color();
+       })
+    </script>
+</body>
+</html>

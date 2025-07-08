@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+
+        }
+        .box{
+            border: 3px solid white;
+            height: 500px; width: 400px;
+            display: flex;
+            color: white;
+            flex-wrap: wrap;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: 1s;
+        }
+        p{
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            height: 30px;
+            transition: 1s;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .box::before{
+            position: absolute;
+            content: "";
+            top: 530px; left: 20px;
+            background-color: purple;
+            height: 100%; width: 90%;
+            z-index: -1;
+            transition: 1s;
+        }
+        .box:hover a{
+            border: 2px solid white;
+            background-color: white;
+            color: black;
+        }
+        .box:hover{
+            color: white;
+        }
+        .box:hover::before{
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        h1{
+            margin-left: 150px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Title </h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quo nobis. Nesciunt maiores, aliquam a porro accusantium inventore quisquam atque? Tempore, ipsum. Cupiditate eligendi consequuntur beatae, minus harum ex velit.</p>
+        <a href="">Read more</a>
+    </div>
+</body>
+</html>
