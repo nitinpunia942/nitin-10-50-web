@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      let set=prompt(parseInt('<input type="text" name="" id="inp">'));    
+        let data=set.charCodeAt();
+        if(data<=32){
+            document.writeln(data+" : words");
+        } else if(data>=33 && data<=47){
+            document.writeln(data+" : symbols");
+        } else if(data>=48 && data<=57){
+            document.writeln(data+" : Integers");
+        } else if(data>=58 && data<=64){
+            document.writeln(data+" : symbols");
+        } else if(data>=65 && data<=90){
+            document.writeln(data+" : Capital Letters");
+        } else if(data>=91 && data<=96){
+            document.writeln(data+" : symbols");
+        } else if(data>=97 && data<=122){
+            document.writeln(data+" : Small Letters");
+        } else if(data>=123 && data<=127){
+            document.writeln(data+" : symbols");
+        }
+    </script>
+</body>
+</html>
