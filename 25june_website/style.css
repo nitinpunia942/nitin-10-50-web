@@ -137,6 +137,8 @@
 
         .image img {
             position: absolute;
+            object-fit: cover;
+            background-position: center;
             top: 110px;
             left: 170px;
             height: 400px;

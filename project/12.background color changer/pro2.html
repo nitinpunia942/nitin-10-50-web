@@ -9,29 +9,35 @@
             margin: 0; padding: 0;
         }
         body{
-            display: flex; height: 100vh;
-            align-items: center;
+            height: 100vh; display: flex;
             justify-content: center;
+            align-items: center;
+            background-color: black;
             flex-direction: column;
             transition: 0.8s;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
         }
         div{
-            font-size: 30px;
+            color: white;
             padding: 20px;
+            font-size: 30px;
+            transition: 0.8s;
         }
         #btn{
-            border: 3px solid black;
-            border-radius: 30px;
-            cursor: context-menu;
-            background-color: rgba(0, 0, 0, 0.425);
-            box-shadow: 5px 5px 10px ;
+        font-size: 40px;
+        border: 3px solid white;
+        border-radius: 25px;
+        background-color: black;
+        cursor: pointer;
         }
+        #code{
+        transition: 0.8s;}
+        
     </style>
 </head>
 <body>
-    <div id="btn">Change color</div>
-    <div id="code">#ffff</div>
+    <div id="btn">Change</div>
+    <div id="code">#0000</div>
     <script>
         let btn=document.getElementById('btn');
         let code=document.getElementById('code');
@@ -41,19 +47,16 @@
             let color="#"
 
             for(let i=0;i<6;i++){
-                color +=letter[Math.floor(Math.random()*16)]
-
+                color +=letter[Math.floor(Math.random()*16)];
             }
             return(color);
         }
         btn.addEventListener('click',()=>{
-            document.body.style.backgroundColor=color()
-            code.innerHTML=color();
+           document.body.style.backgroundColor=color()
+           code.innerHTML=color()
         })
     </script>
 
-
-
-
+     
 </body>
 </html>

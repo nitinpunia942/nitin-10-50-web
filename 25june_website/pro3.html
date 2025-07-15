@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,22 +27,20 @@
         <a href=""><img src="images/facebook.jpg" alt=""></a>
       </div>
     </div>
-    <div class="intro">
+    <div class="intro" data-aos="zoom-in" data-aos-duration="1200">
       <div class="h">Hello</div>
       <div class="n">I'm <p>Nitin</p> Punia</div>
       <div class="w">Web Developer</div>
     </div>
   </div>
 
-
-
-
-  <div class="box2" id="box2">
-    <div class="image">
-      <img src="images/me.jpg" class="img move" alt="">
+  <!-- About Section -->
+  <div class="box2" id="box2" data-aos="fade-up" data-aos-duration="1000">
+    <div class="image" data-aos="slide-right" data-aos-delay="200">
+      <img src="images/virat.jpg" class="img move" alt="">
       <div class="sqr movee"></div>
     </div>
-    <div class="info">
+    <div class="info" data-aos="fade-left" data-aos-delay="400">
       <div class="n">Nitin Punia</div>
       <div class="d">Web Developer & Web Designer</div>
       <div class="p">
@@ -60,14 +61,13 @@
     </div>
   </div>
 
-
-
-  <div class="skill">
+  <!-- Skills Section -->
+  <div class="skill" data-aos="zoom-in" data-aos-duration="1000">
     <h4>My Skills</h4>
   </div>
 
   <div class="boxx">
-    <div class="boxx1">
+    <div class="boxx1" data-aos="fade-right" data-aos-duration="1000">
       <div><h2>Coding skills</h2></div>
       <div><h4>JavaScript</h4></div>
       <div class="js"><div class="js2">100%</div></div>
@@ -81,7 +81,7 @@
       <div class="java"><div class="java2">70%</div></div>
     </div>
 
-    <div class="boxx2">
+    <div class="boxx2" data-aos="fade-left" data-aos-duration="1000">
       <div><h2>Design skills</h2></div>
       <div><h4>UI / UX Design</h4></div>
       <div class="ux"><div class="ux2">95%</div></div>
@@ -91,5 +91,13 @@
       <div class="logo"><div class="logo2">100%</div></div>
     </div>
   </div>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true  // Animates only once while scrolling down
+    });
+  </script>
 </body>
 </html>
