@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        
+        const requestOptions = {
+  method: "GET",
+  redirect: "follow"
+};
+
+fetch("https://dummyjson.com/users", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+        let resultjson=JSON.parse(result);
+       let newjson=resultjson.users;
+
+       str='<table border=2>'
+        for(let i=0;i<newjson.length;i++){
+
+            str=str+'<tr>'+
+                '<td>'+newjson[i]["id"]+'<td>'+
+                '<td>'+newjson[i]["firstName"]+'<td>'+
+                '<td>'+newjson[i]["maidenName"]+'<td>'+
+                '<td>'+newjson[i]["lastName"]+'<td>'+
+                '<td>'+newjson[i]["age"]+'<td>'+
+                '<td>'+newjson[i]["gender"]+'<td>'+
+                '<td>'+newjson[i]["email"]+'<td>'+
+                '<td>'+newjson[i]["phone"]+'<td>'+
+                '<td>'+newjson[i]["username"]+'<td>'+
+                '<td>'+newjson[i]["password"]+'<td>'+
+                '<td>'+newjson[i]["birthDate"]+'<td>'+
+                '<td>'+newjson[i]["image"]+'<td>'+
+                '<td>'+newjson[i]["bloodGroup"]+'<td>'+
+                '<td>'+newjson[i]["height"]+'<td>'+
+                '<td>'+newjson[i]["weight"]+'<td>'+
+                '<td>'+newjson[i]["eyeColor"]+'<td>'+
+                '<td>'+newjson[i]["hair"].type+'<td>'+
+                '<td>'+newjson[i]["hair"].color+'<td>'+
+                '<td>'+newjson[i]["ip"]+'<td>'+
+                '<td>'+newjson[i]["address"].address+'<td>'+
+                '<td>'+newjson[i]["address"].city+'<td>'+
+                '<td>'+newjson[i]["address"].state+'<td>'+
+                '<td>'+newjson[i]["address"].postalCode+'<td>'+
+                '<td>'+newjson[i]["address"].coordinates.lat+'<td>'+
+                '<td>'+newjson[i]["address"].coordinates.lng+'<td>'+
+                '<td>'+newjson[i]["address"].country+'<td>'+
+                '<td>'+newjson[i]["macAddress"]+'<td>'+
+                '<td>'+newjson[i]["university"]+'<td>'+
+                '<td>'+newjson[i]["bank"].cardExpire+'<td>'+
+                '<td>'+newjson[i]["bank"].cardNumber+'<td>'+
+                '<td>'+newjson[i]["bank"].cardType+'<td>'+
+                '<td>'+newjson[i]["bank"].currency+'<td>'+
+                '<td>'+newjson[i]["company"].department+'<td>'+
+                '<td>'+newjson[i]["company"].name+'<td>'+
+                '<td>'+newjson[i]["company"].title+'<td>'+
+                '<td>'+newjson[i]["company"].address.address+'<td>'+
+                '<td>'+newjson[i]["company"].address.city+'<td>'+
+                '<td>'+newjson[i]["company"].address.state+'<td>'+
+                '<td>'+newjson[i]["company"].address.stateCode+'<td>'+
+                '<td>'+newjson[i]["company"].address.postalCode+'<td>'+
+                '<td>'+newjson[i]["company"].address.coordinates.lat+'<td>'+
+                '<td>'+newjson[i]["company"].address.coordinates.lng+'<td>'+
+                '<td>'+newjson[i]["company"].address.country+'<td>'+
+                '<td>'+newjson[i]["ein"]+'<td>'+
+                '<td>'+newjson[i]["ssn"]+'<td>'+
+                '<td>'+newjson[i]["userAgent"]+'<td>'+
+                '<td>'+newjson[i]["crypto"].coin+'<td>'+
+                '<td>'+newjson[i]["crypto"].wallet+'<td>'+
+                '<td>'+newjson[i]["crypto"].network+'<td>'+
+                '<td>'+newjson[i]["role"]+'<td>'+
+                
+            '<tr>'
+        }
+        str=str+'</table>';
+        document.getElementById('box').innerHTML=str;
+
+  })
+  .catch((error) => console.error(error));
+    </script>
+</body>
+</html>

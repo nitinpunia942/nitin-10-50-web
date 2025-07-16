@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo Cards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      margin: 0;
+      padding: 30px;
+    }
+
+    #box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffffcc;
+      border-left: 6px solid #6c63ff;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s forwards;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      color: #2d2d2d;
+    }
+
+    .card p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+
+    .completed {
+      color: green;
+      font-weight: bold;
+    }
+
+    .not-completed {
+      color: crimson;
+      font-weight: bold;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+
+  <script>
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow"
+    };
+
+    fetch("https://dummyjson.com/todos", requestOptions)
+      .then((response) => response.json())
+      .then((resultjson) => {
+        const newjson = resultjson.todos;
+        let str = "";
+
+        for (let i = 0; i < newjson.length; i++) {
+          const completedClass = newjson[i].completed ? 'completed' : 'not-completed';
+          str += `
+            <div class="card" style="animation-delay: ${i * 0.05}s">
+              <h3>${newjson[i].todo}</h3>
+              <p><strong>ID:</strong> ${newjson[i].id}</p>
+              <p><strong>Status:</strong> <span class="${completedClass}">${newjson[i].completed}</span></p>
+              <p><strong>User ID:</strong> ${newjson[i].userId}</p>
+            </div>
+          `;
+        }
+
+        document.getElementById('box').innerHTML = str;
+      })
+      .catch((error) => console.error(error));
+  </script>
+</body>
+</html>

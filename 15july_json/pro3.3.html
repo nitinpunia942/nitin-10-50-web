@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Display</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .card:nth-child(odd) {
+            background-color: #353535;
+        }
+        .card h2 {
+            margin: 0 0 10px;
+            color: #00b7eb;
+            font-size: 1.2em;
+        }
+        .card p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #b0b0b0;
+        }
+        .card p strong {
+            color: #e0e0e0;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="container"></div>
+    <script>
+        const requestOptions = {
+            method: "GET",
+            redirect: "follow"
+        };
+
+        fetch("https://dummyjson.com/users", requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let resultjson = JSON.parse(result);
+                let newjson = resultjson.users;
+                let str = '';
+
+                for (let i = 0; i < newjson.length; i++) {
+                    str += `
+                        <div class="card" style="animation-delay: ${i * 0.1}s">
+                            <img src="${newjson[i].image}" alt="User Image">
+                            <h2>${newjson[i].firstName} ${newjson[i].lastName}</h2>
+                            <p><strong>ID:</strong> ${newjson[i].id}</p>
+                            <p><strong>Age:</strong> ${newjson[i].age}</p>
+                            <p><strong>Gender:</strong> ${newjson[i].gender}</p>
+                            <p><strong>Email:</strong> ${newjson[i].email}</p>
+                            <p><strong>Phone:</strong> ${newjson[i].phone}</p>
+                            <p><strong>Username:</strong> ${newjson[i].username}</p>
+                            <p><strong>Birth Date:</strong> ${newjson[i].birthDate}</p>
+                            <p><strong>Blood Group:</strong> ${newjson[i].bloodGroup}</p>
+                            <p><strong>Height:</strong> ${newjson[i].height} cm</p>
+                            <p><strong>Weight:</strong> ${newjson[i].weight} kg</p>
+                            <p><strong>Eye Color:</strong> ${newjson[i].eyeColor}</p>
+                            <p><strong>Hair:</strong> ${newjson[i].hair.type}, ${newjson[i].hair.color}</p>
+                            <p><strong>Address:</strong> ${newjson[i].address.address}, ${newjson[i].address.city}, ${newjson[i].address.state}, ${newjson[i].address.postalCode}</p>
+                            <p><strong>Company:</strong> ${newjson[i].company.name}, ${newjson[i].company.title}</p>
+                            <p><strong>University:</strong> ${newjson[i].university}</p>
+                        </div>
+                    `;
+                }
+                document.getElementById('box').innerHTML = str;
+            })
+            .catch((error) => console.error(error));
+    </script>
+</body>
+</html>
